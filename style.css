@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    background-color: teal;
+    height: 100vh;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle,teal 78.5%, rgba(239, 240, 240, 0.205)5%);
+}
+.score{
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    opacity: 0;
+    transition: opacity 0.5s ease-in 0.5s;
+}
+.score h1{
+    font-size: 50px;
+}
+.score p{
+    padding: 10px;
+
+}
+.intro{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: cornsilk;
+    transition: opacity 0.5s ease-out;
+}
+.intro h1{
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+}
+.intro button,.match button{
+    padding: 10px 30px;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
+    font-size: 20px;
+    cursor: pointer;
+}
+.match{
+    height: 70vh;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease-in 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 10px;
+    background-image: radial-gradient(circle, white 90%, rgba(239, 240, 240, 0.945) 10%);
+}
+.tie{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+    padding: 15px;
+    color: red;
+    transition: opacity 0.5s ease-in;
+}
+.sides{
+    display: flex;
+   
+}
+.player-side{
+    width: 50%;
+    border-right: 1px solid black;
+}
+.computer-side{
+    width: 50%;
+}
+.player-side h2, .computer-side h2{
+    height: 10vh;
+    justify-content: space-around;
+    display: flex;
+    color: red;
+    transition: opacity 0.3s ease-in;
+}
+.player-side h3{
+    font-size: 25px;
+}
+.computer-hand{
+    transform: rotateY(180deg) rotate(90deg);
+}
+.player-hand{
+    transform: rotate(90deg);
+}
+.hands,.options{
+    display: flex;
+    justify-content: space-around;
+}
+.options{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.match img{
+    width: 150px;
+    height: 150px;
+}
+ .fadeout{
+    opacity: 0;
+    pointer-events: none;
+}
+.fadein{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes shakePlayer {
+    0%{
+        transform: rotate(90deg) translateX(0px);
+    }
+    10%{
+        transform: rotate(90deg) translateX(-50px);
+    }
+    20%{
+        transform: rotate(90deg) translateX(0px);
+    }
+    30%{
+        transform: rotate(90deg) translateX(-50px);
+    }
+    40%{
+        transform: rotate(90deg) translateX(0px);
+    }
+    50%{
+        transform: rotate(90deg) translateX(-50px);
+    }
+    60%{
+        transform: rotate(90deg) translateX(0px);
+    }
+    70%{
+        transform: rotate(90deg) translateX(-50px);
+    }
+    80%{
+        transform: rotate(90deg) translateX(0px);
+    }
+    90%{
+        transform: rotate(90deg) translateX(-50px);
+    }
+    100%{
+        transform: rotate(90deg) translateX(0px);
+    }
+}
+@keyframes shakeComputer{
+    0%{
+        transform: rotateY(180deg) rotate(90deg) translateX(0px);
+    }
+    10%{
+        transform: rotateY(180deg) rotate(90deg) translateX(-50px);
+    }
+    20%{
+        transform: rotateY(180deg) rotate(90deg) translateX(0px);
+    }
+    30%{
+        transform: rotateY(180deg) rotate(90deg) translateX(-50px);
+    }
+    40%{
+        transform: rotateY(180deg) rotate(90deg) translateX(0px);
+    }
+    50%{
+        transform: rotateY(180deg) rotate(90deg) translateX(-50px);
+    }
+    60%{
+        transform:  rotateY(180deg) rotate(90deg) translateX(0px);
+    }
+    70%{
+        transform:  rotateY(180deg) rotate(90deg) translateX(-50px);
+    }
+    80%{
+        transform:  rotateY(180deg) rotate(90deg) translateX(0px);
+    }
+    90%{
+        transform: rotateY(180deg) rotate(90deg) translateX(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) rotate(90deg) translateX(0px);
+    }
+}
